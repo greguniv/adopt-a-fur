@@ -1,9 +1,15 @@
-
+import React from 'react';
 import './App.css';
+// Components
 
-function App() {
+// Pages
+
+// Contexts
+
+
+const App = () => {
   return (
-    <div className="App">
+    <div>
       
     </div>
   );
