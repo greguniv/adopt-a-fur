@@ -45,7 +45,7 @@ const App = () => {
       }
       )
       setAdopts(res.data.animals)
-      console.log(res.data.animals)
+      // console.log(res.data.animals)
     } catch (error) {
       console.log(error)
     }
@@ -63,7 +63,7 @@ const App = () => {
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='login' element={<Login />} />
-          <Route path='adoptables' element={<Adoptables />} />
+          <Route path='adoptables' element={<Adoptables adopts={adopts} />} />
           <Route path='favorites' element={<Favorites />} />
         </Routes>
 
