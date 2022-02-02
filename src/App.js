@@ -27,7 +27,11 @@ const App = () => {
   const [adopts, setAdopts] = useState([])
   const [favorites, setFavorites] = useState([])
   
-  const tokenAccess = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiJVOUxkclhFaDNrZkR5SmNPY2hKNkloZFh2dHc3ZklhVnZsVmo2cnQ0dDRCbVZvNmVmWCIsImp0aSI6ImJlNGQ1YmNhYjhjMzNjMGZiMTBiZGZmNzQwNzczODk5MzcwOWVkYTE4Nzk0MWNhYjlkMmJjMzAzNWI0NTg2MzVkZWE3ZDE5MzE0NGViZWRiIiwiaWF0IjoxNjQzODE2ODg0LCJuYmYiOjE2NDM4MTY4ODQsImV4cCI6MTY0MzgyMDQ4NCwic3ViIjoiIiwic2NvcGVzIjpbXX0.dYrmv-vejbKQpkddfky9cHX_B_lXLGjGaEbV_XMvaFPCUjukzHFbNsWPiHMTJZxWKYd9abUbSDLHp_BM5CC3kawuJwEhSrJjNcRO64kICgdmM-KozZwXYQN-Gp9uuljhzLxRiTnPIN-U3AtML_iVCsAOnr0oJ8tReoLhx1ZfVuiJKlaP6FCryIQ5G6QE56exGZTzYiTCNQLsgIfXRfNhqs7Gij0K9GA1P19Hff1879V1Vd8eq_x93Wh_1EpbwZ5ebUjKxawxGs6gF6AgL7JjkOLWofvWpx97i2qwZzhtIvDuVdoditaHH6garEx-3xNTtV5FGmPxffyDdW2GATedrg'
+  const tokenAccess = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiJVOUxkclhFaDNrZkR5SmNPY2hKNkloZFh2dHc3ZklhVnZsVmo2cnQ0dDRCbVZvNmVmWCIsImp0aSI6Ijk4MzMwYTUyZTZlNDQxYjM2YzQwMjM2MTMyZDcyODVkOTdhYWFlZjZjNmVkNWY0ZTI0ODVjZTMzNTU4NmIyNWI0YzZiZmQ4MjZkMmJmZGM2IiwiaWF0IjoxNjQzODIwNTE0LCJuYmYiOjE2NDM4MjA1MTQsImV4cCI6MTY0MzgyNDExNCwic3ViIjoiIiwic2NvcGVzIjpbXX0.pwv8LYpDQMI4Y8kMBwoA6AciEs2Z88JpZmHxUnb0VT8YeZSUaA-D7R13O_M4qypMylh05k-1EOLGmcoQ3BWdddU4tXM9-d-WOHizSsrmNQ-JF8VnEWwyypvNLxa8I7oGZa3cz101QsQtFFg6DIT4HCZgBYvAzTC2PbzNmlUGRE6pTcxaV1GN4l50QrAJ_bhu-aUzJPotw8I6Ih_2wH-xEzgh8BjGPosRAcSUkSSM0GnCdpuYYexNksECdBlshtYMnsZeM0zflwatp1wk-tbHWviaOt4c0StbsOrooA-SAmIW5adQzdtQZmJHIzePy7P83CTTpCSRM1C8h3H18shNQg'
+  
+  useEffect(() => {
+    fetchAdopts();
+  }, [])
 
   const fetchAdopts = async () => {
     try {
@@ -43,9 +47,10 @@ const App = () => {
     }
   }
 
-  useEffect(() => {
-    fetchAdopts();
-  }, [])
+  const addToFavorites = (adopts) => {
+    console.log('we added', adopts)
+    setFavorites([...favorites, adopts])
+  }
 
   return (
     <div className='App'>
@@ -54,9 +59,9 @@ const App = () => {
 
         <Routes>
           <Route path='/' element={<Home />} />
-          <Route path='login' element={<Login />} />
+          <Route path='login' element={<Login setUser={setUser} />} />
           <Route path='adoptables' element={<Adoptables adopts={adopts} />} />
-          <Route path='favorites' element={<Favorites />} />
+          <Route path='favorites' element={<Favorites favorites={favorites}/>} />
         </Routes>
 
         <Footer />

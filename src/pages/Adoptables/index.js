@@ -18,10 +18,12 @@ const Adoptables = ({ adopts }) => {
 
                             <div className="card-body">
                                 <h5 className="card-title">{adopts.name}</h5>
-                                <p className="card-text">ID: {adopts.id}</p>
-                                <p className="card-text">Gender: {adopts.gender}</p>
+                                <p className="card-id">ID: {adopts.id}</p>
+                                <p className="card-gender">Gender: {adopts.gender}</p>
+                                <p className="card-status">Status: {adopts.status}</p>
+                                <p className="card-description">{adopts.description}</p>
                                 <button className="btn btn-danger">Like</button>
-                                <a href="#" className="btn btn-primary">Go somewhere</a>
+                                <a href={adopts.url} className="btn btn-primary">Adopt Me?</a>
                             </div>
                         </div>
                     ))

@@ -13,14 +13,14 @@ const Login = ({ setUser }) => {
     const handleSubmit = e => {
         e.preventDefault()
         setUser(username)
-        navigate('/pokemon/list')
+        navigate('adoptables')
     }
 
 
     return (
         <form className='mx-auto border p-2 m-2' id="login-form" onSubmit={handleSubmit}>
             <div className="mb-3">
-                <label htmlFor="exampleInputUser1" className="form-label">User address</label>
+                <label htmlFor="exampleInputUser1" className="form-label">Email address</label>
                 <input
                     type="text"
                     className="form-control"
