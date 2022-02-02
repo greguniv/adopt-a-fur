@@ -1,0 +1,10 @@
+.adopts-container {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.adopt-card {
+    width: 15rem;
+}
