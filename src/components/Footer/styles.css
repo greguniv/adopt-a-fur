@@ -1,3 +1,17 @@
 .footer {
     background-color: lavender;
 }
+ul {
+    list-style: none;
+    display: flex;
+}
+.subfooter {
+    display: flex;
+    align-items: center;
+    padding-right: 50px;
+    padding-left: 50px;
+}
+.subfooter-social-links {
+    display: flex;
+    justify-content: space-evenly;
+}
