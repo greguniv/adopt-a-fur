@@ -41,7 +41,7 @@ const Login = ({ setUser }) => {
                 <div className="signup-link">
                     Don't have an account? <a href="./signup">Sign up!</a>
                 </div>
-                <button type="submit" className="btn btn-primary">Sign Up</button>
+                <button type="submit" className="btn btn-primary">Log In</button>
             </form>
         </div>
     );
