@@ -1,9 +1,12 @@
 import React from 'react';
+import './styles.css'
 
 const Footer = () => {
     return (
-        <footer>
-            This is our Footer!
+        <footer className='footer'>
+            <h6>
+            This website was created using Petfinder's <a href='https://www.petfinder.com/developers/'>API</a>.
+            </h6>
         </footer>
     );
 }
