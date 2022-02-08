@@ -20,7 +20,6 @@ import UserContext from './contexts/UserContext';
 // api key = 'U9LdrXEh3kfDyJcOchJ6IhdXvtw7fIaVvlVj6rt4t4BmVo6efX'
 // api secret = 'Y5lS7OxvO8L2tZrEuWOTgAw2rw9AZ9HiAbCDT7S2'
 
-// access token is the token itself; will need to have system store it as a variable and include it in the header of every API request until it expires and we request another
 // TOKEN ONLY LASTS 1 HOUR
 
 const App = () => {
@@ -28,7 +27,7 @@ const App = () => {
   const [adopts, setAdopts] = useState([])
   const [favorites, setFavorites] = useState([])
 
-  const tokenAccess = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiJVOUxkclhFaDNrZkR5SmNPY2hKNkloZFh2dHc3ZklhVnZsVmo2cnQ0dDRCbVZvNmVmWCIsImp0aSI6IjU4MWJkNDQ5NGQ4OTI0MTgwNTI2NGVmYjM0MDc4NmQyMzlhMmI5YjIzMjYwNWM0MmQ4MGFiN2I0OWY4ZmQwZGZjMjVkOTJlNjgwNzFiNGYyIiwiaWF0IjoxNjQzOTkzMjA4LCJuYmYiOjE2NDM5OTMyMDgsImV4cCI6MTY0Mzk5NjgwOCwic3ViIjoiIiwic2NvcGVzIjpbXX0.rn7F3Tg-4uXE4HLPm6kKeCVKMWEhOjnogufIzUb6bvnGtX9-2HzUT9-FbsRq5jqJ4sc2cVnYA52YTSfSfke8vFAxQtVk0_6jn_nrd98i1E2NBjMx6KhMcLHq6IG_8v03QjPastOmzOTsAVVFAYeo-sgs1pRV7MzmGQwpodHBZif08T-sPJut0unjJVpHbaOuCX9PiSrRWg8Ogsr-jpyqN8VFVlJIU-U-ssKygyS4smnfEfZcMpc7jqRsKcYhDj9GROJdR9aan9deqVadiASHaucC4q9IETXEfOOAX3CQ9hePie4HNUT6QroXLYiIZ4mHUlSGC5i1t23ErxDuiqdcog'
+  const tokenAccess = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiJVOUxkclhFaDNrZkR5SmNPY2hKNkloZFh2dHc3ZklhVnZsVmo2cnQ0dDRCbVZvNmVmWCIsImp0aSI6IjViMGZhNmM2ZmRmZWQwMjQyNDY1ZjZkZWQwZGZlOWFkNGY3NWNhMzc2MTZkZTdmZTFkNmQwYjM4YTk2NDUyNGE0N2UzMThhNjdhZDgzYmM5IiwiaWF0IjoxNjQ0Mjk0ODUyLCJuYmYiOjE2NDQyOTQ4NTIsImV4cCI6MTY0NDI5ODQ1Miwic3ViIjoiIiwic2NvcGVzIjpbXX0.JJyLTKAqr1vPDJPVIoTd82jTyj2uKnTU3fcenaMvMBwa9sN_89FmLW3c02J7LmCii_unvkVifXKY_UGB4aB0jtn2RfkqY22nrSaNPM8DvvaiZCq_hczkEddJyb9spYSVVbineqaIy8QEaTq3m7FLB_3f9zmU4SFpY2RslHZibXOk16rdWir8tlK8PaFnqee9mi80sC-3rRzcmBlieIZd4u8tTe-KMrqXMbGsF0cR-MhLWILo2NUHet9gi7QD0pJTMwVRHVWK80pTjvgqNRRm5iADnullIUH-d4ppEqSrJvEfE4QivgMpeT2gqhbpQLuh6pr_Xn6cOhtRzN0tiDL3YQ'
 
   useEffect(() => {
     fetchAdopts();

@@ -1,5 +1,7 @@
 .footer {
     background-color: lavender;
+    display: flex;
+    justify-content: center;
 }
 ul {
     list-style: none;
@@ -13,5 +15,5 @@ ul {
 }
 .subfooter-social-links {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
 }
