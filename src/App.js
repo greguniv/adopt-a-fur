@@ -20,14 +20,12 @@ import UserContext from './contexts/UserContext';
 // api key = 'U9LdrXEh3kfDyJcOchJ6IhdXvtw7fIaVvlVj6rt4t4BmVo6efX'
 // api secret = 'Y5lS7OxvO8L2tZrEuWOTgAw2rw9AZ9HiAbCDT7S2'
 
-// TOKEN ONLY LASTS 1 HOUR
-
 const App = () => {
   const [user, setUser] = useState('')
   const [adopts, setAdopts] = useState([])
   const [favorites, setFavorites] = useState([])
 
-  const tokenAccess = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiJVOUxkclhFaDNrZkR5SmNPY2hKNkloZFh2dHc3ZklhVnZsVmo2cnQ0dDRCbVZvNmVmWCIsImp0aSI6ImQ4M2U0MzhlYjM1YTg5ZWRmNmRhMTlmMjBmNDBlOWI1ZTc2NGZhNWM4NTllZDc2ZmEzMGQ0YWEyY2Y1ZjI5YTdlOGJmNzAzZjNjMzM3ODIwIiwiaWF0IjoxNjQ0MzMzMDc1LCJuYmYiOjE2NDQzMzMwNzUsImV4cCI6MTY0NDMzNjY3NSwic3ViIjoiIiwic2NvcGVzIjpbXX0.sbrPu-ZXPSMJ73xwyM1wSnP-GFeU7BraWphc1-NUjL4Bek10fPN20VTFHlhmMy3Yg_M39M3ONXPjn-tH3Q9kzHi1AqqCewrHKo65lSoM8qCM7Ceqy9fSF_l_4QVj-U6SDpkUjlL2alcALcpSQ5iX8gIIDpCVJv2SsOPFFP5Wp1hsrSZG805wOEomiPmqyeiY0rBmKH0NAJteley8BRRe_Lb8Vg1FLg8S0bSAo4ypXLWscXeVyDKSltUZkIP28uMzpNOVxYRvfkr57UAvWnrLujPkv-g6K1h-gVU3cUX38Ej6rZu9N23iO4wrJ4A6vw8_JsLpRPOjeJOOmIkVbuaZfA'
+  const tokenAccess = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiJVOUxkclhFaDNrZkR5SmNPY2hKNkloZFh2dHc3ZklhVnZsVmo2cnQ0dDRCbVZvNmVmWCIsImp0aSI6IjE4MTZiYzJlNTE4YTAwMzgyMDIzN2I2MzcxMjExM2ZjMjdiZjUyZDVhZjkxYzE3ZTVmMjQ5MzA5MTYyMzM4NGI1OGE4YWZjZTNmN2FkYTM2IiwiaWF0IjoxNjQ0MzM0OTI4LCJuYmYiOjE2NDQzMzQ5MjgsImV4cCI6MTY0NDMzODUyOCwic3ViIjoiIiwic2NvcGVzIjpbXX0.bO_jXn04BJ3VRe-Q7uy-nRNCEZBBBQCePlMgb43U2lp-bpwGMnyKzwCg059xaRL8-nv1SPXnFuHNeBm1bXff-BHBXQM4i3-UX8bMjtp3asQN--zXMc_royoagV21rRJfpESXsMRCMX9qifeJ2hX_qMN8C6D1WQhqjUOXw1eDSBE5KSPvfnvGRcCwxnxVfkVDJksbFqIlMIqcvIqNRhausRKK9qso6nTDpbXau7hRZKOb_qEky0EiQ8jVqQm_D-VJKyKN9MjT8Hi9QL-vIStVKqpZU0dbJdV2Smj-_PePhStxJqL9Jf5IMsL6OXy5JGnQ781G6A8tKmoBjCmfdJp8cg'
 
   useEffect(() => {
     fetchAdopts();
